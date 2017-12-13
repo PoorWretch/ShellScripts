@@ -6,7 +6,7 @@
 # Author:      youshumin
 # -------------------------------------------------------------------------------- 
 result=$(curl -I -m 10 -o /dev/null -s -w %{http_code} www.baidu.com)
-if [ result != 200 ];then
+if [ x$result != x200 ];then
 	echo "The Host not connected to the Internet!!"
 	exit 1
 fi 
