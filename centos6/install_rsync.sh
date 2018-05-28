@@ -16,22 +16,14 @@ use chroot = yes
 read only = no
 uid = root
 gid = root
-port=22873  #修改默认端口
-[rsyncdata]   # 客户端需要的使用名字  需要同步多个就在
-path=/data/etc/rsync/data/    # 同步到的目录
+port=22873  
+[rsyncdata]   
+path=/data/etc/rsync/data/  
 list=yes
 ignore error
-auth users = rsync   # 同步使用的用户
-secrets file = /data/etc/rsync/conf/.rsync_server.pw  #同步使用的密码
+auth users = rsync   
+secrets file = /data/etc/rsync/conf/.rsync_server.pw 
 EFO
 echo "rsync:fgaogjp213gHSDQW-adg" > /data/etc/rsync/conf/.rsync_server.pw
 chmod 600 /data/etc/rsync/conf/.rsync_server.pw  
 /data/etc/rsync/bin/rsync --daemon --config=/data/etc/rsync/conf/rsync.conf  
-if  $? == 0;then
-    echo "Install Rsync OK!"
-    echo "Rsync user: rsync"
-    echo "Rsync project: rsyncdata"
-    echo "Rsync port: 22873"
-    echo "Rsync Passwd: rsync:fgaogjp213gHSDQW-adg"
-fi
-
