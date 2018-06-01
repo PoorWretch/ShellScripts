@@ -1,0 +1,12 @@
+### inotify  检测的文件 和排除的文件家 
+###
+/data/etc
+/data/wwwroot
+/data/issue
+/data/app
+@/data/backup
+@/data/logs/
+@/data/etc/nginx/client_body_temp
+@/data/etc/nginx/proxy_cache
+@/data/etc/nginx/cache
+@/data/etc/rsync/conf/.rsync_server.pw

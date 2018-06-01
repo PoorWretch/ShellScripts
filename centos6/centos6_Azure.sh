@@ -12,6 +12,8 @@ sed -i 's/^id:5:/id:3:/' /etc/inittab
 LANG=en_US-UTF-8 
 # for sun in `chkconfig --list|grep 3:on|awk '{print $1}'`;do chkconfig --level 3 $sun off;done
 # for sun in crond rsyslog sshd network;do chkconfig --level 3 $sun on;done
+chkconfig  postfix off
+
 
 echo "ulimit -SHn 102400" >> /etc/rc.local
 cat >> /etc/security/limits.conf <<EFO

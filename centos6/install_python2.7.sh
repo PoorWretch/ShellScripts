@@ -3,7 +3,8 @@ cd /usr/local/src
 yum install -y zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel xz xz-devel
 mkdir install_python2.7
 cd install_python2.7
-wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
+wget https://8min.blob.core.windows.net/file/Python-2.7.14.tgz
+#wget https://www.python.org/ftp/python/2.7.14/Python-2.7.14.tgz
 tar xf Python-2.7.14.tgz
 cd Python-2.7.14
 ./configure --prefix=/usr/local/python27

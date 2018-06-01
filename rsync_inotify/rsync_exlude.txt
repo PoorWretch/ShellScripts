@@ -1,0 +1,9 @@
+###
+###  同步时候排除的文件 或者文件夹
+###  应用方法  rsync  添加参数 --exclude-from="xxx.txt"
+*.pid
+*.sock
+*.pw
+*.log
+libinotifytools.so
+libinotifytools.so.0
